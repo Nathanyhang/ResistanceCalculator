@@ -1,11 +1,11 @@
 # Parallel and Series Equivalent Resistance Calculator
 
-Author: Nathan Ng
-Date Created: November 17, 2019
-Current Version: V1
+Author: Nathan Ng\
+Date Created: November 17, 2019\
+Current Version: V1\
 
-*Note 1: This is a WIP repository.*
-*Note 2: This repository is compiled in Eclipse IDE.*
+*Note 1: This is a WIP repository.*\
+*Note 2: This repository is compiled in Eclipse IDE.*\
 
 ## Features
 
