@@ -1,11 +1,11 @@
-# Parallel and Series Equivalent Resistance Calculator.
+# Parallel and Series Equivalent Resistance Calculator
 
 Author: Nathan Ng
 Date Created: November 17, 2019
 Current Version: V1
 
-* Note 1: This is a WIP repository. *
-* Note 2: This repository is compiled in Eclipse IDE. *
+*Note 1: This is a WIP repository.*
+*Note 2: This repository is compiled in Eclipse IDE.*
 
 ## Features
 
@@ -17,16 +17,16 @@ Current Version: V1
 
 ## Instructions
 
-* TODO: Insert sample circuit here *
+*TODO: Insert sample circuit here*
 
 
 ** The main program of this project is labelled as SimpleResistanceCalculator.java, located in src. **
-1. Enter your list of resistances ** in order ** as the resistance IDs are automatically labelled with respect to the order of your input.
+1. Enter your list of resistances **in order** as the resistance IDs are automatically labelled with respect to the order of your input.
 2. Enter your resistor connections in the following format:
 
-	ID ID ID ConnectionType
+		ID ID ID ConnectionType
 
-  * Where ID is your resistor ID and ConnectionType is either denoting a Parallel or Series circuit. A single resistor can be added as a single-resistor Series Circuit. *
+  *Where ID is your resistor ID and ConnectionType is either denoting a Parallel or Series circuit. A single resistor can be added as a single-resistor series Circuit.*
 
 3. Type "next" when you have completed all connections.
 4. The following will be outputted to the screen:
