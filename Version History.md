@@ -1,4 +1,4 @@
-<u>**Version 1**</u>\
+<ins>**Version 1**</ins>\
 Date: November 14, 2019
 
 * New Features:
@@ -23,8 +23,8 @@ Date: November 14, 2019
 	* Add the capability for the user to directly specify the resistors in a text file (optional).
 
 ## 
-<u>**Version 2**</u>\
-Date: November 14, 2019\
+<ins>**Version 2**</ins>\
+Date: November 16, 2019
 
 * Fixed Issues:
 	* Removed "Combination Level".
