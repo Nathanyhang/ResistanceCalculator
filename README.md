@@ -20,7 +20,7 @@ Current Version: V1
 *TODO: Insert sample circuit here*
 
 
-** The main program of this project is labelled as SimpleResistanceCalculator.java, located in src. **
+**_The main program of this project is labelled as SimpleResistanceCalculator.java, located in src._**
 1. Enter your list of resistances **in order** as the resistance IDs are automatically labelled with respect to the order of your input.
 2. Enter your resistor connections in the following format:
 
