@@ -17,7 +17,7 @@ Current Version: V2
 
 ## Instructions
 
-![Sample Circuit Diagram with Resistance Equations](C:\Users\nate_\Documents\Eclipse Documents 2019\SimpleResistanceCalculator\images\Circuit Diagram.png)
+![Sample Circuit Diagram with Resistance Equations](https://raw.githubusercontent.com/Nathanyhang/SimpleResistanceCalculator/master/images/Circuit%20Diagram.png)
 
 
 **_The main program of this project is labelled as SimpleResistanceCalculator.java, located in src._**
