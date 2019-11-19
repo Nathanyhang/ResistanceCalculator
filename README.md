@@ -12,7 +12,7 @@ Current Version: V2
 * Parallel and Series equivalent resistance calculations, supporting up to 9 resistors. 
 * Solves all equivalent resistances of the circuit based on how the user wants their resistors connected.
 * Labels all resistor connections in the form of an equation for all the equivalent resistors and equivalent resistance of the entire circuit.
-* Text-input based UI
+* Text-input based UI.
 
 
 ## Instructions
@@ -31,6 +31,6 @@ Current Version: V2
 3. Type "next" when you have completed all connections.
 4. The following will be outputted to the screen:
 	* Equivalent resistance in ohms.
-	* All resistor IDs and their respective resistances
-	* Final equivalent resistance equations with "//" denoting Parallel and "+" denoting Series
+	* All resistor IDs and their respective resistances.
+	* Final equivalent resistance equations with "//" denoting Parallel and "+" denoting Series.
 	* All generated resistance equations while the user were entering their connections.
