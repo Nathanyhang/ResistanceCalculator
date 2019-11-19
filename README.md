@@ -9,7 +9,7 @@ Current Version: V2
 
 ## Features
 
-* Parallel and Series equivalent resistance calculations, supporting up to 9 resistors. 
+* Parallel and Series equivalent resistance calculations, supporting up to 9 resistors.
 * Solves all equivalent resistances of the circuit based on how the user wants their resistors connected.
 * Labels all resistor connections in the form of an equation for all the equivalent resistors and equivalent resistance of the entire circuit.
 * Text-input based UI.
@@ -17,7 +17,7 @@ Current Version: V2
 
 ## Instructions
 
-*TODO: Insert sample circuit here*
+![Sample Circuit Diagram with Resistance Equations](C:\Users\nate_\Documents\Eclipse Documents 2019\SimpleResistanceCalculator\images\Circuit Diagram.png)
 
 
 **_The main program of this project is labelled as SimpleResistanceCalculator.java, located in src._**
