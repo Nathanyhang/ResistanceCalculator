@@ -26,11 +26,11 @@ Current Version: V2
 
 		ID ID ID ConnectionType
 
-  *Where ID is your resistor ID and ConnectionType is either denoting a Parallel or Series circuit. A single resistor can be added as a single-resistor series Circuit.*
+  	*where ID is your resistor ID and ConnectionType is either denoting a Parallel or Series circuit. A single resistor can be added as a single-resistor series Circuit.*
 
 3. Type "next" when you have completed all connections.
 4. The following will be outputted to the screen:
 	* Equivalent resistance in ohms.
 	* All resistor IDs and their respective resistances
-	* Final equivalent resistance equations with "//" denoting parallel and "+" denoting Series
+	* Final equivalent resistance equations with "//" denoting Parallel and "+" denoting Series
 	* All generated resistance equations while the user were entering their connections.
