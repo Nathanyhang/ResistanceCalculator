@@ -49,8 +49,8 @@ public class SimpleResistanceCalculator {
 		}
 
 		System.out.print(
-				"\nPlease enter the list of IDs and the connection type in the format (ID1 ID2 IDN, | connection type). \n\n");
-		System.out.print("\tFor example, \"1 5 7, Parallel\" means R1//R5//R7, for multilayered circuits,\n"
+				"\nPlease enter the list of IDs and the connection type in the format (ID1 ID2 IDN connection type). \n\n");
+		System.out.print("\tFor example, \"1 5 7 Parallel\" means R1//R5//R7, for multilayered circuits,\n"
 				+ "\tthis will automatically be referred to \"R157.\" Type 157 as an example,\n"
 				+ "\tIDs to add R157 to the connections.\n");
 
@@ -158,7 +158,7 @@ public class SimpleResistanceCalculator {
 		System.out.println("... Calculating resistances ...");
 		System.out.println("Done!");
 		System.out.println("\n--------------------------------------------");
-		System.out.println("Equivalent Resistance: " + resistorList.get(resistorList.size() - 1).getResistance());
+		System.out.println("Equivalent Resistance: " + sigFigs.format(resistorList.get(resistorList.size() - 1).getResistance()));
 
 		System.out.println("Resistance List: ");
 		for (Resistor r : resistorList) {

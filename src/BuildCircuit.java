@@ -1,9 +1,9 @@
 import java.util.List;
 
 public class BuildCircuit {
-	protected Parallel parallelCircuit = new Parallel();
-	protected Series seriesCircuit= new Series();
-	protected String connectionDiagram="";
+	private Parallel parallelCircuit = new Parallel();
+	private Series seriesCircuit= new Series();
+	private String connectionDiagram="";
 	
 	
 	//* BuildCircuit will combine all circuit fragments together
@@ -11,13 +11,13 @@ public class BuildCircuit {
 		for (Resistor r:resistorList) {
 			parallelCircuit.addParallelCircuit(r);
 		}
-		parallelCircuit.drawConnection(resistorList);
+		parallelCircuit.setConnection(resistorList);
 	}
 	public void createSeriesCircuit(List<Resistor> resistorList) {
 		for (Resistor r:resistorList) {
 			seriesCircuit.addSeriesCircuit(r);
 		}
-		seriesCircuit.drawConnection(resistorList);
+		seriesCircuit.setConnection(resistorList);
 	}
 	public double getParallelResistance() {
 		return parallelCircuit.calculateTotalResistance();
@@ -26,8 +26,8 @@ public class BuildCircuit {
 		return seriesCircuit.calculateTotalResistance();
 	}
 	public String getCircuitConnection(String circuitType) {
-		connectionDiagram=circuitType=="Parallel"?parallelCircuit.getConnectionList()
-				:seriesCircuit.getConnectionList();
+		connectionDiagram=circuitType=="Parallel"?parallelCircuit.getConnection()
+				:seriesCircuit.getConnection();
 		return connectionDiagram;
 	}
 	
