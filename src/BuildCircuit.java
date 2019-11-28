@@ -9,13 +9,13 @@ public class BuildCircuit {
 	//* BuildCircuit will combine all circuit fragments together
 	public void createParallelCircuit(List<Resistor> resistorList) {
 		for (Resistor r:resistorList) {
-			parallelCircuit.addParallelCircuit(r);
+			parallelCircuit.addLoad(r);
 		}
 		parallelCircuit.setConnection(resistorList);
 	}
 	public void createSeriesCircuit(List<Resistor> resistorList) {
 		for (Resistor r:resistorList) {
-			seriesCircuit.addSeriesCircuit(r);
+			seriesCircuit.addLoad(r);
 		}
 		seriesCircuit.setConnection(resistorList);
 	}

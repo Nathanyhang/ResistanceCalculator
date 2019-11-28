@@ -2,12 +2,15 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
+import java.io.FileReader;
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.LinkedHashMap;
 import java.util.Stack;
 
-public class SimpleResistanceCalculator {
-
+public class ResistanceCalculator {
+	
 	public static void main(String[] args) {
 
 		int totalResistors = 0;
@@ -25,42 +28,36 @@ public class SimpleResistanceCalculator {
 		BuildCircuit buildCircuit = new BuildCircuit();
 		
 		Scanner scan = new Scanner(System.in);
+		FileReader reader;
+		Properties p=new Properties();
 		DecimalFormat sigFigs;
 
-		sigFigs = new DecimalFormat("#.####");// 5 sig figs format
+		sigFigs = new DecimalFormat("#.####");// 5 sig. figs. format
+		
+		try {
+			reader=new FileReader("SystemMessages.properties");	
+			p.load(reader);
+		} catch (IOException e) {
+			System.err.println("File not found!");
+		}
 
-		System.out.print("Please enter the total # of resistors in the circuit: ");
+		System.out.print(p.getProperty("GetTotalResistances"));
 		totalResistors = scan.nextInt();
 
-		System.out.print(
-				"Please enter your list of resistances for the " + totalResistors + " resistors you requested.\n\n");
-		System.out.print(
-				"\tFor example, 30 means R1 = 30 ohms. The resistor ID will be given in the order of your input.\n"
-				+ "You may add them in succession to quickly add the resistors. \n\n");
-		System.out.println("Your Input: ");
-
-		// add new resistor object each time
-		// set resistances and IDs of every new resistor
+		System.out.print(p.getProperty("GetResistancesHelp"));
+		System.out.print(p.getProperty("InputMessage"));
+		
+		// set resistances and IDs of every new resistor object
 		for (int i = 1; i <= totalResistors; i++) {
 			addResistor = new Resistor();
 			addResistor.setResistorID(i);
 			addResistor.setResistance(scan.nextInt());
 			resistorList.add(addResistor);
 		}
-
-		System.out.print(
-				"\nPlease enter the list of IDs and the connection type in the format (ID1 ID2 IDN connection type). \n\n");
-		System.out.print("\tFor example, \"1 5 7 Parallel\" means R1//R5//R7, for multilayered circuits,\n"
-				+ "\tthis will automatically be referred to \"R157.\" Type 157 as an example,\n"
-				+ "\tIDs to add R157 to the connections.\n");
-
-		System.out.print(
-				"\nPlease start from the innermost layer and work your way out to the outermost layer. Type \"next\" at\n"
-						+ "anytime between your input to indicate that you want to enter the next set of resistors in the next level.\n\n");
-
+		
+		System.out.print(p.getProperty("CircuitConnectionHelp"));
 		scan.nextLine();
-
-		System.out.println("Your Input: ");
+		System.out.print(p.getProperty("InputMessage"));
 		
 			while (!response.equals("next")) {
 
@@ -85,7 +82,6 @@ public class SimpleResistanceCalculator {
 								}
 							}
 							connectList.add(addResistor);
-
 						}
 
 						if (responseList[responseList.length - 1].equalsIgnoreCase("Parallel")) {
@@ -153,7 +149,6 @@ public class SimpleResistanceCalculator {
 		}
 		finalConnection= equivalentID + finalConnection;
 
-		
 		System.out.println("\n... Setting up connections ...");
 		System.out.println("... Calculating resistances ...");
 		System.out.println("Done!");
