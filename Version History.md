@@ -51,4 +51,4 @@ Date: April 28, 2020
 * For Next Implementation(s):
 	* Add a new ErrorHandler class
 	* Implement FileInputHandler for text-file input
-	* Optional: Implment impedances
+	* Optional: Implement impedances
