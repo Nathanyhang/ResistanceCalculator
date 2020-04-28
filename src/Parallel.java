@@ -1,11 +1,11 @@
-
 public class Parallel extends Circuit {
 
 	public Parallel() {
 		symbol="//";
 	}
 
-	protected double getCircuitValue(double input) {
-		return 1/input;
+	public String toString() {
+		return CircuitType.getString(CircuitType.PARALLEL).charAt(0) + Integer.toString(circuitID);
 	}
+	
 }

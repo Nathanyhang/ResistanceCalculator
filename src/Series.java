@@ -3,9 +3,8 @@ public class Series extends Circuit {
 	public Series() {
 		symbol=" + ";
 	}
-
-	protected double getCircuitValue(double input) {
-		return input;
+	
+	public String toString() {
+		return CircuitType.getString(CircuitType.SERIES).charAt(0) + Integer.toString(circuitID);
 	}
-
 }

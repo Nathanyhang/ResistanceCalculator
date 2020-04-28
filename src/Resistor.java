@@ -1,19 +1,19 @@
 
-public class Resistor {
+public class Resistor extends Load {
 
-	private double resistance;
-	private int resistorID;
-	
-	public void setResistorID(int resistorID) {
-		this.resistorID=resistorID;
+	public Resistor() {
+		super();
+		units = getUnits();
 	}
-	public void setResistance(double resistance) {
-		this.resistance=resistance;
+
+	public Resistor(int resistorID, double resistance) {
+		loadID = resistorID;
+		loadValue = resistance;
+		units = getUnits();
 	}
-	public double getResistance() {
-		return resistance;
+
+	public String getUnits() {
+		return (loadValue == 1) ? LoadType.getUnits(LoadType.RESISTOR) : LoadType.getUnits(LoadType.RESISTOR) + "s";
 	}
-	public int getResistorID() {
-		return resistorID;
-	}
+
 }
